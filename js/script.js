@@ -20,16 +20,19 @@ function setupGame(){
     for (let cellNum = 1; cellNum <= cellsCount; cellNum++){
         const eleCell = document.createElement("div");
         eleCell.classList.add("cell");
-        console.log(eleCell);
+        //console.log(eleCell);
         eleCell.innerHTML = cellNum; 
         eleCell.style.width = `calc(100% / ${cellsPerRow})`;
         eleCell.style.height = `calc(100% / ${cellsPerRow})`;
         eleGrid.append(eleCell);
-        eleCell.addEventListener("click", changeColor);
-        function changeColor(){
-            eleCell.classList.add("red");
-        }
-        //console.log(eleGrid);
+        eleCell.addEventListener("click", () => eleCell.classList.add("red"));
+        //console.log(eleGrid); 
+    }
+    for ( casNum = 1; casNum <= 16; casNum++){
+        let casualsNum = Math.floor(Math.random() * (100 - 1 + 1) ) + 1;
+        console.log(casualsNum);
     }
 }
+
+
 
