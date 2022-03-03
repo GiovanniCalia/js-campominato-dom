@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+header{
+    height: 5rem;
+    background-color: white;
+    border-bottom: 2px solid blue;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header h1{
+    margin-right: auto;
+}
+
+.header label, .header select, header button{
+    margin: 0.5rem;
+}
+
+main{
+    height: calc(100vh - 10rem);
+    display: flex;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.grid h2{
+    text-align: center;
+}
+
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+footer{
+    height: 5rem;
+    background-color: white;
+}
