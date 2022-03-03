@@ -15,6 +15,7 @@ function setupGame(){
     //console.log(cellsCount);
     const cellsPerRow = Math.sqrt(cellsCount);
     //console.log(cellsPerRow);
+    //let bombNumber = [];
 
 
     for (let cellNum = 1; cellNum <= cellsCount; cellNum++){
@@ -28,11 +29,15 @@ function setupGame(){
         eleCell.addEventListener("click", () => eleCell.classList.add("red"));
         //console.log(eleGrid); 
     }
-    for ( casNum = 1; casNum <= 16; casNum++){
+    for (let casNum = 1; casNum <= 16; casNum++){
         let casualsNum = Math.floor(Math.random() * (100 - 1 + 1) ) + 1;
-        console.log(casualsNum);
-    }
+        let bombNumber = [];
+        bombNumber.push(casualsNum);
+        while (bombNumber.includes(casualsNum)){
+            casualsNum = Math.floor(Math.random() * (100 - 1 + 1) ) + 1
+        }
+        console.log(bombNumber);
+    }  
+
 }
-
-
 
